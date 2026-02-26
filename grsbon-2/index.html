@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRSBON — Industrial Storage & Logistics Equipment | Dajiang Manufacturing</title>
+<meta name="description" content="OEM & ODM manufacturer of storage cages, steel pallets, stacking racks since 2001. Factory-direct pricing, 3000+ global clients.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===================== RESET & VARIABLES ===================== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0c4187;
+  --navy-light:#1a56a8;
+  --navy-dark:#092d5e;
+  --maroon:#960625;
+  --maroon-hover:#7a0520;
+  --white:#ffffff;
+  --off-white:#f6f6f6;
+  --light-gray:#f0f0f0;
+  --border:#e8e8e8;
+  --text:#333333;
+  --heading:#030303;
+  --text-light:#666666;
+  --text-muted:#999999;
+  --font-heading:'Playfair Display',Georgia,serif;
+  --font-body:'Source Sans 3','Open Sans',sans-serif;
+  --shadow-sm:0 1px 5px rgba(0,0,0,0.08);
+  --shadow-md:0 4px 16px rgba(0,0,0,0.1);
+  --shadow-lg:0 8px 30px rgba(0,0,0,0.12);
+  --ease:cubic-bezier(0.25,0.46,0.45,0.94);
+  --transition:0.35s var(--ease);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--text);background:var(--white);font-size:15px;line-height:1.8;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* ===================== REVEAL ===================== */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ===================== ① TOP BAR ===================== */
+.top-bar{background:var(--navy);color:rgba(255,255,255,0.85);font-size:13px;padding:9px 0}
+.top-bar .container{display:flex;justify-content:space-between;align-items:center}
+.top-bar-left{display:flex;align-items:center;gap:24px}
+.top-bar-left a{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.85);transition:color var(--transition)}
+.top-bar-left a:hover{color:var(--white)}
+.top-bar-left svg{width:14px;height:14px;flex-shrink:0}
+.top-bar-right{display:flex;gap:6px}
+.lang-btn{background:transparent;border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.7);padding:3px 12px;font-size:12px;font-family:var(--font-body);font-weight:600;letter-spacing:0.5px;cursor:pointer;border-radius:3px;transition:all var(--transition)}
+.lang-btn:hover,.lang-btn.active{background:var(--white);color:var(--navy);border-color:var(--white)}
+
+/* ===================== ② NAVIGATION ===================== */
+.main-nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:1px solid var(--border);transition:box-shadow var(--transition)}
+.main-nav.scrolled{box-shadow:0 2px 12px rgba(0,0,0,0.08)}
+.main-nav .container{display:flex;justify-content:space-between;align-items:center;height:74px}
+.nav-logo{display:flex;align-items:center}
+.nav-logo-img{height:42px;width:auto;transition:opacity var(--transition)}
+.nav-links{display:flex;align-items:center;gap:36px}
+.nav-links a{font-size:14px;font-weight:600;color:var(--text);letter-spacing:0.3px;position:relative;transition:color var(--transition)}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--navy);transition:width var(--transition)}
+.nav-links a:hover{color:var(--navy)}
+.nav-links a:hover::after{width:100%}
+.btn-quote{display:inline-flex;align-items:center;gap:8px;background:var(--maroon);color:var(--white);font-family:var(--font-body);font-size:14px;font-weight:600;padding:11px 26px;border:2px solid var(--maroon);border-radius:4px;cursor:pointer;transition:all var(--transition)}
+.btn-quote:hover{background:var(--maroon-hover);border-color:var(--maroon-hover);transform:translateY(-1px);box-shadow:0 4px 12px rgba(150,6,37,0.25)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text);transition:all var(--transition)}
+
+/* ===================== ③ HERO ===================== */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--heading);overflow:hidden}
+.hero-video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);object-fit:cover;opacity:0.35}
+.hero-fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.25}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%)}
+.hero-content{position:relative;z-index:2;max-width:760px;padding:0 24px}
+.hero-eyebrow{display:inline-block;font-family:var(--font-body);font-size:13px;font-weight:600;color:rgba(255,255,255,0.7);letter-spacing:3px;text-transform:uppercase;margin-bottom:20px;animation:fadeIn 0.8s ease both 0.2s}
+.hero h1{font-family:var(--font-heading);font-size:clamp(32px,4.5vw,52px);font-weight:700;color:var(--white);line-height:1.2;margin-bottom:18px;animation:fadeIn 0.8s ease both 0.4s}
+.hero-sub{font-size:17px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:36px;max-width:580px;margin-left:auto;margin-right:auto;animation:fadeIn 0.8s ease both 0.6s}
+.hero-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;animation:fadeIn 0.8s ease both 0.8s}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--maroon);color:var(--white);font-family:var(--font-body);font-size:15px;font-weight:600;padding:14px 32px;border:2px solid var(--maroon);border-radius:4px;cursor:pointer;transition:all var(--transition)}
+.btn-primary:hover{background:var(--maroon-hover);border-color:var(--maroon-hover);transform:translateY(-2px);box-shadow:0 6px 20px rgba(150,6,37,0.3)}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--white);font-family:var(--font-body);font-size:15px;font-weight:600;padding:14px 32px;border:2px solid rgba(255,255,255,0.4);border-radius:4px;cursor:pointer;transition:all var(--transition)}
+.btn-secondary:hover{border-color:var(--white);background:rgba(255,255,255,0.08);transform:translateY(-2px)}
+@keyframes fadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+/* ===================== ④ NUMBERS ===================== */
+.numbers{padding:60px 0;background:var(--white);border-bottom:1px solid var(--border)}
+.numbers-grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+.number-item{padding:16px 0;position:relative}
+.number-item:not(:last-child)::after{content:'';position:absolute;right:0;top:50%;transform:translateY(-50%);width:1px;height:40px;background:var(--border)}
+.number-val{font-family:var(--font-heading);font-size:clamp(36px,3.5vw,52px);font-weight:700;color:var(--navy);line-height:1}
+.number-suffix{font-family:var(--font-body);font-size:0.5em;color:var(--maroon);font-weight:700}
+.number-label{font-size:13px;font-weight:600;color:var(--text-light);letter-spacing:1px;text-transform:uppercase;margin-top:6px}
+
+/* ===================== ⑤ PRODUCTS ===================== */
+.products{padding:90px 0;background:var(--off-white)}
+.section-head{text-align:center;margin-bottom:56px}
+.section-eyebrow{font-family:var(--font-body);font-size:12px;font-weight:700;color:var(--maroon);letter-spacing:3px;text-transform:uppercase;margin-bottom:10px}
+.section-title{font-family:var(--font-heading);font-size:clamp(28px,3vw,38px);font-weight:700;color:var(--heading);line-height:1.25}
+.section-desc{font-size:15px;color:var(--text-light);margin-top:12px;max-width:540px;margin-left:auto;margin-right:auto}
+.products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.product-card{background:var(--white);border-radius:6px;overflow:hidden;box-shadow:var(--shadow-sm);transition:all var(--transition)}
+.product-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.product-card-img{position:relative;height:240px;overflow:hidden;background:var(--off-white)}
+.product-card-img img{width:100%;height:100%;object-fit:contain;padding:16px;transition:transform 0.5s ease}
+.product-card:hover .product-card-img img{transform:scale(1.04)}
+.product-card-overlay{position:absolute;inset:0;background:rgba(12,65,135,0.6);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity var(--transition)}
+.product-card:hover .product-card-overlay{opacity:1}
+.product-card-overlay span{color:var(--white);font-family:var(--font-body);font-size:14px;font-weight:600;letter-spacing:1px;border:2px solid var(--white);padding:10px 24px;border-radius:4px;transition:background var(--transition)}
+.product-card-overlay span:hover{background:rgba(255,255,255,0.15)}
+.product-card-body{padding:22px 20px}
+.product-card-body h3{font-family:var(--font-heading);font-size:20px;font-weight:700;color:var(--heading);margin-bottom:8px}
+.product-card-body p{font-size:14px;color:var(--text-light);line-height:1.6;margin-bottom:14px}
+.link-arrow{font-size:13px;font-weight:600;color:var(--navy);display:inline-flex;align-items:center;gap:5px;transition:gap var(--transition),color var(--transition)}
+.link-arrow:hover{gap:10px;color:var(--maroon)}
+.link-arrow svg{width:16px;height:16px}
+
+/* ===================== ⑥ OEM ===================== */
+.oem{padding:90px 0;background:var(--white)}
+.oem-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.oem-content .section-eyebrow{text-align:left}
+.oem-content .section-title{text-align:left;margin-bottom:36px}
+.oem-step{display:flex;gap:18px;margin-bottom:32px;position:relative}
+.oem-step:not(:last-child)::before{content:'';position:absolute;left:20px;top:48px;width:1px;height:calc(100% - 12px);background:var(--border)}
+.oem-num{flex-shrink:0;width:40px;height:40px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-family:var(--font-body);font-size:14px;font-weight:700;color:var(--white);position:relative;z-index:1}
+.oem-step-text h4{font-family:var(--font-heading);font-size:18px;font-weight:700;color:var(--heading);margin-bottom:4px}
+.oem-step-text p{font-size:14px;color:var(--text-light);line-height:1.6}
+.oem-image{position:relative;border-radius:6px;overflow:hidden}
+.oem-image img{width:100%;height:400px;object-fit:cover;border-radius:6px}
+.oem-image::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--navy),var(--maroon))}
+.oem-cta{margin-top:36px}
+
+/* ===================== ⑦ COMPANY ===================== */
+.company{padding:90px 0;background:var(--off-white)}
+.company-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.company-text .section-eyebrow{text-align:left}
+.company-text .section-title{text-align:left;margin-bottom:20px}
+.company-desc{font-size:15px;color:var(--text-light);line-height:1.8;margin-bottom:20px}
+.company-desc strong{color:var(--text);font-weight:600}
+.company-images{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;height:440px}
+.company-img{border-radius:6px;overflow:hidden;position:relative}
+.company-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease}
+.company-img:hover img{transform:scale(1.04)}
+.company-img-main{grid-row:1/3}
+.company-img-badge{position:absolute;bottom:14px;left:14px;background:var(--navy);color:var(--white);font-size:12px;font-weight:700;letter-spacing:1px;padding:7px 14px;border-radius:3px}
+
+/* ===================== ⑧ CERTIFICATIONS ===================== */
+.certs{padding:50px 0;background:var(--white);overflow:hidden;position:relative;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.certs-label{text-align:center;font-size:12px;font-weight:700;color:var(--text-muted);letter-spacing:3px;text-transform:uppercase;margin-bottom:24px}
+.certs-track{display:flex;width:max-content;animation:marquee 35s linear infinite}
+.certs-track:hover{animation-play-state:paused}
+.cert-item{flex-shrink:0;display:flex;align-items:center;gap:14px;padding:0 36px}
+.cert-item img{width:56px;height:56px;object-fit:contain;opacity:0.55;filter:grayscale(30%);transition:all var(--transition)}
+.cert-item:hover img{opacity:1;filter:grayscale(0%)}
+.cert-name{font-size:14px;font-weight:700;color:var(--heading);line-height:1.3}
+.cert-name span{display:block;font-size:11px;font-weight:400;color:var(--text-muted);margin-top:2px}
+.certs::before,.certs::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none}
+.certs::before{left:0;background:linear-gradient(90deg,var(--white),transparent)}
+.certs::after{right:0;background:linear-gradient(-90deg,var(--white),transparent)}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ===================== ⑨ WHY CHOOSE ===================== */
+.why{padding:90px 0;background:var(--white)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.why-card{padding:32px 24px;background:var(--off-white);border-radius:6px;border:1px solid transparent;transition:all var(--transition)}
+.why-card:hover{background:var(--white);border-color:var(--border);box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.why-icon{width:50px;height:50px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.why-icon svg{width:24px;height:24px;stroke:var(--white);fill:none;stroke-width:1.8}
+.why-card h3{font-family:var(--font-heading);font-size:18px;font-weight:700;color:var(--heading);margin-bottom:8px}
+.why-card p{font-size:14px;color:var(--text-light);line-height:1.6}
+
+/* ===================== ⑩ APPLICATIONS ===================== */
+.applications{padding:90px 0;background:var(--off-white)}
+.app-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.app-card{background:var(--white);padding:28px 24px;border-radius:6px;border:1px solid var(--border);transition:all var(--transition)}
+.app-card:hover{border-color:var(--navy);box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.app-card-icon{width:44px;height:44px;margin-bottom:14px}
+.app-card-icon svg{width:44px;height:44px;stroke:var(--navy);fill:none;stroke-width:1.2}
+.app-card h3{font-family:var(--font-heading);font-size:17px;font-weight:700;color:var(--heading);margin-bottom:6px}
+.app-card p{font-size:14px;color:var(--text-light);line-height:1.5}
+
+/* ===================== ⑪ QUALITY ===================== */
+.quality{padding:90px 0;background:var(--white)}
+.qc-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.qc-image{border-radius:6px;overflow:hidden;position:relative}
+.qc-image img{width:100%;height:480px;object-fit:cover;border-radius:6px}
+.qc-image-tag{position:absolute;top:16px;left:16px;background:var(--navy);color:var(--white);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:7px 14px;border-radius:3px}
+.qc-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.qc-card{padding:24px 18px;border:1px solid var(--border);border-radius:6px;transition:all var(--transition);position:relative}
+.qc-card:hover{border-color:var(--navy);box-shadow:var(--shadow-sm)}
+.qc-card-num{font-family:var(--font-heading);font-size:36px;font-weight:700;color:var(--off-white);position:absolute;top:8px;right:12px;line-height:1}
+.qc-card-icon{margin-bottom:12px}
+.qc-card-icon svg{width:32px;height:32px;stroke:var(--navy);fill:none;stroke-width:1.5}
+.qc-card h3{font-size:15px;font-weight:700;color:var(--heading);margin-bottom:4px}
+.qc-card p{font-size:13px;color:var(--text-light);line-height:1.5}
+
+/* ===================== ⑫ BLOG ===================== */
+.blog{padding:90px 0;background:var(--off-white)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.blog-card{background:var(--white);border-radius:6px;overflow:hidden;box-shadow:var(--shadow-sm);transition:all var(--transition)}
+.blog-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.blog-card-img{position:relative;height:210px;overflow:hidden}
+.blog-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease}
+.blog-card:hover .blog-card-img img{transform:scale(1.04)}
+.blog-tag{position:absolute;top:14px;left:14px;background:var(--navy);color:var(--white);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:3px}
+.blog-card-body{padding:22px 20px}
+.blog-meta{display:flex;gap:14px;font-size:12px;color:var(--text-muted);margin-bottom:10px}
+.blog-meta span{display:flex;align-items:center;gap:4px}
+.blog-meta svg{width:13px;height:13px;stroke:var(--text-muted);fill:none;stroke-width:1.5}
+.blog-card-body h3{font-family:var(--font-heading);font-size:18px;font-weight:700;color:var(--heading);line-height:1.35;margin-bottom:8px;transition:color var(--transition)}
+.blog-card:hover .blog-card-body h3{color:var(--navy)}
+.blog-card-body p{font-size:14px;color:var(--text-light);line-height:1.6;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.blog-all{text-align:center;margin-top:44px}
+.btn-outline-dark{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text);font-family:var(--font-body);font-size:14px;font-weight:600;padding:12px 30px;border:2px solid var(--text);border-radius:4px;cursor:pointer;transition:all var(--transition)}
+.btn-outline-dark:hover{background:var(--navy);color:var(--white);border-color:var(--navy);transform:translateY(-2px)}
+
+/* ===================== ⑬ CTA ===================== */
+.cta{padding:80px 0;background:var(--navy);text-align:center;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;top:-50%;right:-20%;width:500px;height:500px;border-radius:50%;background:rgba(255,255,255,0.03)}
+.cta::after{content:'';position:absolute;bottom:-40%;left:-10%;width:400px;height:400px;border-radius:50%;background:rgba(255,255,255,0.02)}
+.cta h2{font-family:var(--font-heading);font-size:clamp(26px,3vw,38px);font-weight:700;color:var(--white);margin-bottom:12px;position:relative;z-index:1}
+.cta p{font-size:16px;color:rgba(255,255,255,0.7);margin-bottom:32px;position:relative;z-index:1}
+.cta-buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;position:relative;z-index:1}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--navy);font-family:var(--font-body);font-size:15px;font-weight:600;padding:14px 32px;border:2px solid var(--white);border-radius:4px;cursor:pointer;transition:all var(--transition)}
+.btn-white:hover{background:transparent;color:var(--white);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.2)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--white);font-family:var(--font-body);font-size:15px;font-weight:600;padding:14px 32px;border:2px solid rgba(255,255,255,0.35);border-radius:4px;cursor:pointer;transition:all var(--transition)}
+.btn-ghost:hover{border-color:var(--white);background:rgba(255,255,255,0.08);transform:translateY(-2px)}
+
+/* ===================== ⑭ FOOTER ===================== */
+.footer{background:#222;color:rgba(255,255,255,0.6);padding:64px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.footer-brand{display:flex;flex-direction:column}
+.footer-brand img{height:36px;width:auto;filter:brightness(0) invert(1);margin-bottom:14px}
+.footer-brand p{font-size:14px;line-height:1.6;color:rgba(255,255,255,0.45);margin-bottom:18px}
+.footer-social{display:flex;gap:10px}
+.footer-social a{width:36px;height:36px;border:1px solid rgba(255,255,255,0.12);border-radius:4px;display:flex;align-items:center;justify-content:center;transition:all var(--transition)}
+.footer-social a:hover{border-color:var(--navy-light);background:rgba(12,65,135,0.3)}
+.footer-social a svg{width:16px;height:16px;fill:rgba(255,255,255,0.55)}
+.footer-social a:hover svg{fill:var(--white)}
+.footer h4{font-family:var(--font-heading);font-size:16px;font-weight:700;color:var(--white);margin-bottom:18px}
+.footer-links li{margin-bottom:9px}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.45);transition:color var(--transition)}
+.footer-links a:hover{color:rgba(255,255,255,0.9)}
+.footer-contact li{display:flex;gap:10px;margin-bottom:12px;font-size:14px;color:rgba(255,255,255,0.45);line-height:1.5}
+.footer-contact svg{width:15px;height:15px;flex-shrink:0;margin-top:3px;stroke:var(--navy-light);fill:none}
+.footer-certs{display:flex;gap:10px;margin-top:16px}
+.footer-cert{padding:5px 12px;border:1px solid rgba(255,255,255,0.1);border-radius:3px;font-size:11px;font-weight:700;color:rgba(255,255,255,0.5);letter-spacing:0.5px}
+.footer-bottom{padding:22px 0;text-align:center;font-size:13px;color:rgba(255,255,255,0.25)}
+
+/* ===================== RESPONSIVE ===================== */
+@media(max-width:1200px){
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+  .qc-layout{grid-template-columns:1fr}
+  .qc-image img{height:300px}
+  .blog-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .top-bar-right{display:none}
+  .nav-links{display:none}
+  .nav-links.active{display:flex;flex-direction:column;position:absolute;top:74px;left:0;right:0;background:var(--white);padding:20px 24px;gap:14px;box-shadow:var(--shadow-lg);border-top:2px solid var(--navy)}
+  .hamburger{display:flex}
+  .hero{min-height:70vh}
+  .numbers-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+  .number-item:not(:last-child)::after{display:none}
+  .products-grid{grid-template-columns:1fr}
+  .oem-grid{grid-template-columns:1fr}
+  .oem-image{order:-1}
+  .oem-image img{height:260px}
+  .company-grid{grid-template-columns:1fr}
+  .company-images{height:300px}
+  .why-grid{grid-template-columns:1fr}
+  .app-grid{grid-template-columns:1fr}
+  .qc-cards{grid-template-columns:1fr}
+  .blog-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:28px}
+  .hero-buttons{flex-direction:column;align-items:center}
+  .cta-buttons{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ① TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <a href="tel:+8605768616388"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>0576-86162388</a>
+      <a href="mailto:sales@djshelf.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>sales@djshelf.com</a>
+    </div>
+    <div class="top-bar-right">
+      <button class="lang-btn active">EN</button>
+      <button class="lang-btn">CN</button>
+    </div>
+  </div>
+</div>
+
+<!-- ② NAVIGATION -->
+<nav class="main-nav" id="mainNav">
+  <div class="container">
+    <a href="#" class="nav-logo"><img class="nav-logo-img" src="IMG/page%20img/logo.png" alt="GRSBON"></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#">Home</a>
+      <a href="#products">Products</a>
+      <a href="#oem">OEM &amp; ODM</a>
+      <a href="#applications">Applications</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="btn-quote">Get a Quote</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ③ HERO -->
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80">
+    <source src="https://assets.mixkit.co/videos/34563/34563-720.mp4" type="video/mp4">
+  </video>
+  <img class="hero-fallback" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80" alt="" id="heroFallback">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Established 2001 &mdash; Wenling, China</div>
+    <h1>Your Trusted Factory for Storage & Logistics Equipment</h1>
+    <p class="hero-sub">OEM & ODM manufacturing since 2001 — serving 3,000+ clients across 60+ countries with factory-direct pricing and ISO-certified quality.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Request a Quote <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="#products" class="btn-secondary">View Our Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- ④ NUMBERS -->
+<section class="numbers">
+  <div class="container">
+    <div class="numbers-grid">
+      <div class="number-item reveal"><div class="number-val"><span class="counter" data-target="20">0</span><span class="number-suffix">+</span></div><div class="number-label">Years Experience</div></div>
+      <div class="number-item reveal"><div class="number-val"><span class="counter" data-target="1000000" data-format="comma">0</span><span class="number-suffix">+</span></div><div class="number-label">Annual Production</div></div>
+      <div class="number-item reveal"><div class="number-val"><span class="counter" data-target="3000" data-format="comma">0</span><span class="number-suffix">+</span></div><div class="number-label">Global Customers</div></div>
+      <div class="number-item reveal"><div class="number-val"><span class="counter" data-target="60">0</span><span class="number-suffix">+</span></div><div class="number-label">Export Countries</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑤ PRODUCTS -->
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Our Products</div>
+      <h2 class="section-title">Industrial Storage Solutions</h2>
+      <p class="section-desc">Engineered for durability, designed for efficiency. Four core product lines built to your specifications.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal">
+        <div class="product-card-img">
+          <img src="IMG/page%20img/storage%20cages.jpg" alt="Storage Cages" loading="lazy">
+          <a href="#" class="product-card-overlay"><span>View Details</span></a>
+        </div>
+        <div class="product-card-body">
+          <h3>Storage Cages</h3>
+          <p>Foldable & stackable wire mesh cages, 300–1200kg load capacity, custom sizes available.</p>
+          <a href="#" class="link-arrow">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-card-img">
+          <img src="IMG/page%20img/steel%20pallets.png" alt="Steel Pallets" loading="lazy">
+          <a href="#" class="product-card-overlay"><span>View Details</span></a>
+        </div>
+        <div class="product-card-body">
+          <h3>Steel Pallets</h3>
+          <p>Heavy-duty galvanized or powder-coated steel pallets, standard & custom sizes.</p>
+          <a href="#" class="link-arrow">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-card-img">
+          <img src="IMG/page%20img/stacking%20racks.png" alt="Stacking Racks" loading="lazy">
+          <a href="#" class="product-card-overlay"><span>View Details</span></a>
+        </div>
+        <div class="product-card-body">
+          <h3>Stacking Racks</h3>
+          <p>Forklift-compatible stackable racks for maximizing vertical warehouse space.</p>
+          <a href="#" class="link-arrow">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-card-img">
+          <img src="IMG/page%20img/custom%20metal%20container.jpg" alt="Custom Metal Containers" loading="lazy">
+          <a href="#" class="product-card-overlay"><span>View Details</span></a>
+        </div>
+        <div class="product-card-body">
+          <h3>Custom Metal Containers</h3>
+          <p>OEM/ODM foldable iron material boxes, mesh containers, and bespoke solutions.</p>
+          <a href="#" class="link-arrow">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ OEM -->
+<section class="oem" id="oem">
+  <div class="container">
+    <div class="oem-grid">
+      <div class="oem-content">
+        <div class="section-eyebrow">Custom Manufacturing</div>
+        <h2 class="section-title">We Build What You Need — OEM & ODM</h2>
+        <div class="oem-step reveal">
+          <div class="oem-num">1</div>
+          <div class="oem-step-text"><h4>Share Your Requirements</h4><p>Send us drawings, specs, or ideas. Our team reviews within 24 hours.</p></div>
+        </div>
+        <div class="oem-step reveal">
+          <div class="oem-num">2</div>
+          <div class="oem-step-text"><h4>Design & Prototype</h4><p>Our engineers create samples within 7 days. Revisions until you're satisfied.</p></div>
+        </div>
+        <div class="oem-step reveal">
+          <div class="oem-num">3</div>
+          <div class="oem-step-text"><h4>Mass Production & Delivery</h4><p>Factory-direct shipping worldwide. Full export documentation included.</p></div>
+        </div>
+        <div class="oem-cta"><a href="#contact" class="btn-primary">Start Your Custom Project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+      </div>
+      <div class="oem-image reveal">
+        <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&q=80" alt="Factory production" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑦ COMPANY -->
+<section class="company" id="about">
+  <div class="container">
+    <div class="company-grid">
+      <div class="company-text reveal">
+        <div class="section-eyebrow">About Dajiang</div>
+        <h2 class="section-title">Trusted Manufacturer Since 2001</h2>
+        <p class="company-desc"><strong>Wenling Dajiang Storage and Logistics Equipment Manufacturing Co., Ltd.</strong> has been a leading force in industrial storage solutions for over two decades. Located in Wenling, Zhejiang — China's manufacturing heartland — our <strong>25,000m² modern factory</strong> is equipped with advanced automated production lines, CNC welding systems, and electrostatic powder coating facilities.</p>
+        <p class="company-desc">We specialize in designing and manufacturing <strong>storage cages, steel pallets, stacking racks, and custom metal containers</strong> for clients across <strong>60+ countries</strong> including Europe, America, Japan, South Korea, and Southeast Asia.</p>
+        <a href="#contact" class="btn-primary">Contact Us <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div class="company-images reveal">
+        <div class="company-img company-img-main"><img src="IMG/page%20img/factory.jpg" alt="Factory" loading="lazy"><div class="company-img-badge">Est. 2001</div></div>
+        <div class="company-img"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=80" alt="Manufacturing" loading="lazy"></div>
+        <div class="company-img"><img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=600&q=80" alt="Welding" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑧ CERTIFICATIONS -->
+<section class="certs">
+  <div class="certs-label">Certifications & Standards</div>
+  <div class="certs-track">
+    <div class="cert-item"><img src="IMG/page%20img/iso-1.png" alt="ISO 9001"><div class="cert-name">ISO 9001:2015<span>Quality Management</span></div></div>
+    <div class="cert-item"><img src="IMG/page%20img/iso-2.png" alt="CE"><div class="cert-name">CE Certified<span>European Conformity</span></div></div>
+    <div class="cert-item"><img src="IMG/page%20img/iso-1.png" alt="ISO 14001"><div class="cert-name">ISO 14001:2015<span>Environmental Mgmt</span></div></div>
+    <div class="cert-item"><img src="IMG/page%20img/iso-2.png" alt="SGS"><div class="cert-name">SGS Verified<span>Factory Audit Passed</span></div></div>
+    <div class="cert-item"><img src="IMG/page%20img/iso-1.png" alt="ISO 45001"><div class="cert-name">ISO 45001:2018<span>Health & Safety</span></div></div>
+    <div class="cert-item"><img src="IMG/page%20img/iso-2.png" alt="TUV"><div class="cert-name">TUV Tested<span>Product Safety</span></div></div>
+    <div class="cert-item"><img src="IMG/page%20img/iso-1.png" alt="RoHS"><div class="cert-name">RoHS Compliant<span>Substance Restricted</span></div></div>
+    <!-- duplicate -->
+    <div class="cert-item"><img src="IMG/page%20img/iso-1.png" alt="ISO 9001"><div class="cert-name">ISO 9001:2015<span>Quality Management</span></div></div>
+    <div class="cert-item"><img src="IMG/page%20img/iso-2.png" alt="CE"><div class="cert-name">CE Certified<span>European Conformity</span></div></div>
+    <div class="cert-item"><img src="IMG/page%20img/iso-1.png" alt="ISO 14001"><div class="cert-name">ISO 14001:2015<span>Environmental Mgmt</span></div></div>
+    <div class="cert-item"><img src="IMG/page%20img/iso-2.png" alt="SGS"><div class="cert-name">SGS Verified<span>Factory Audit Passed</span></div></div>
+    <div class="cert-item"><img src="IMG/page%20img/iso-1.png" alt="ISO 45001"><div class="cert-name">ISO 45001:2018<span>Health & Safety</span></div></div>
+    <div class="cert-item"><img src="IMG/page%20img/iso-2.png" alt="TUV"><div class="cert-name">TUV Tested<span>Product Safety</span></div></div>
+    <div class="cert-item"><img src="IMG/page%20img/iso-1.png" alt="RoHS"><div class="cert-name">RoHS Compliant<span>Substance Restricted</span></div></div>
+  </div>
+</section>
+
+<!-- ⑨ WHY CHOOSE US -->
+<section class="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Our Advantages</div>
+      <h2 class="section-title">Why Choose GRSBON</h2>
+      <p class="section-desc">Two decades of manufacturing excellence, trusted by 3,000+ businesses worldwide.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M3 7v14M21 7v14M6 7V4a1 1 0 011-1h10a1 1 0 011 1v3M9 21v-4h6v4"/></svg></div><h3>Factory Direct</h3><p>No middlemen. Competitive pricing direct from our 25,000m² facility.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div><h3>OEM & ODM Ready</h3><p>Custom designs from concept to mass production with full engineering support.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><h3>Global Export</h3><p>Shipped to 60+ countries with full export documentation and packaging.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3>Strict Quality Control</h3><p>ISO-certified processes. Every batch inspected before shipment.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 5.5 20 16.5 16 14 16 8"/></svg></div><h3>Fast Turnaround</h3><p>Standard lead time 15–20 days. Rush orders available on request.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Online Factory Audit</h3><p>Video verification available anytime. See our facility before ordering.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑩ APPLICATIONS -->
+<section class="applications" id="applications">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Industries We Serve</div>
+      <h2 class="section-title">Trusted Across Industries</h2>
+      <p class="section-desc">From automotive assembly lines to global shipping — our products work wherever efficiency matters.</p>
+    </div>
+    <div class="app-grid">
+      <div class="app-card reveal"><div class="app-card-icon"><svg viewBox="0 0 24 24"><path d="M5 17H3v-6l2-5h9l4 5h1a2 2 0 012 2v4h-2M7 17a2 2 0 104 0 2 2 0 00-4 0zM17 17a2 2 0 10-4 0 2 2 0 004 0z"/></svg></div><h3>Automotive</h3><p>Parts storage racks & custom containers for assembly lines.</p></div>
+      <div class="app-card reveal"><div class="app-card-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><h3>E-commerce & Logistics</h3><p>High-density foldable cages for fulfillment centers.</p></div>
+      <div class="app-card reveal"><div class="app-card-icon"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div><h3>Retail & Supermarket</h3><p>Roll containers and display cages for store operations.</p></div>
+      <div class="app-card reveal"><div class="app-card-icon"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div><h3>Food & Beverage</h3><p>Galvanized hygienic storage meeting food-safety standards.</p></div>
+      <div class="app-card reveal"><div class="app-card-icon"><svg viewBox="0 0 24 24"><path d="M2 20h20M5 20V8l7-5 7 5v12"/><path d="M9 20v-6h6v6"/></svg></div><h3>Manufacturing</h3><p>Heavy-duty industrial storage for factories and workshops.</p></div>
+      <div class="app-card reveal"><div class="app-card-icon"><svg viewBox="0 0 24 24"><path d="M2 20l2-2h4l2-6h4l2 6h4l2 2M6 12V6a2 2 0 012-2h8a2 2 0 012 2v6"/></svg></div><h3>Export & Freight</h3><p>Stackable pallets optimized for container shipping.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑪ QUALITY -->
+<section class="quality">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Quality Assurance</div>
+      <h2 class="section-title">Quality You Can Trust</h2>
+      <p class="section-desc">Every product goes through rigorous inspection before shipment.</p>
+    </div>
+    <div class="qc-layout">
+      <div class="qc-image reveal"><img src="https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&q=80" alt="Quality inspection" loading="lazy"><div class="qc-image-tag">ISO 9001 Certified</div></div>
+      <div class="qc-cards">
+        <div class="qc-card reveal"><div class="qc-card-num">01</div><div class="qc-card-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Raw Material Inspection</h3><p>Q235 steel certified before production begins.</p></div>
+        <div class="qc-card reveal"><div class="qc-card-num">02</div><div class="qc-card-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div><h3>Welding Strength Test</h3><p>Load and stress testing on all welded joints.</p></div>
+        <div class="qc-card reveal"><div class="qc-card-num">03</div><div class="qc-card-icon"><svg viewBox="0 0 24 24"><path d="M2 12h5l2-9 4 18 3-9h6"/></svg></div><h3>Surface Treatment Check</h3><p>Zinc thickness and coating adhesion verified.</p></div>
+        <div class="qc-card reveal"><div class="qc-card-num">04</div><div class="qc-card-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3>Final Load Test</h3><p>Each batch tested to rated capacity before shipping.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑫ BLOG -->
+<section class="blog">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">News & Insights</div>
+      <h2 class="section-title">From Our Blog</h2>
+      <p class="section-desc">Industry trends, product guides, and manufacturing insights.</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card reveal">
+        <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=80" alt="Blog" loading="lazy"><div class="blog-tag">Guide</div></div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><span><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Jan 15, 2025</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>5 min</span></div>
+          <h3>How to Choose the Right Storage Cage for Your Warehouse</h3>
+          <p>A complete buyer's guide covering load capacity, stacking options, surface treatments, and custom sizing.</p>
+          <a href="#" class="link-arrow">Read Article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Blog" loading="lazy"><div class="blog-tag">Comparison</div></div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><span><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Dec 28, 2024</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>4 min</span></div>
+          <h3>Steel Pallets vs. Wood Pallets: Which Is Better for Export?</h3>
+          <p>Comparing durability, cost, hygiene standards, and international shipping compliance.</p>
+          <a href="#" class="link-arrow">Read Article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600&q=80" alt="Blog" loading="lazy"><div class="blog-tag">Industry</div></div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><span><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Nov 10, 2024</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>6 min</span></div>
+          <h3>5 Things to Know Before Ordering Custom Storage Equipment</h3>
+          <p>Essential tips on MOQ, lead times, quality inspection and shipping for first-time buyers.</p>
+          <a href="#" class="link-arrow">Read Article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="blog-all"><a href="#" class="btn-outline-dark">View All Articles <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+  </div>
+</section>
+
+<!-- ⑬ CTA -->
+<section class="cta" id="contact">
+  <div class="container">
+    <h2>Ready to Source Factory-Direct Storage Equipment?</h2>
+    <p>Get a free quote within 24 hours. Samples available for qualified buyers.</p>
+    <div class="cta-buttons">
+      <a href="#" class="btn-white">Request a Free Quote <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="#" class="btn-ghost"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Download Catalog</a>
+    </div>
+  </div>
+</section>
+
+<!-- ⑭ FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="IMG/page%20img/logo.png" alt="GRSBON">
+        <p>Professional manufacturer of industrial storage and logistics equipment since 2001. OEM & ODM services for global businesses.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2c.312-1.732.466-3.49.46-5.25a29.005 29.005 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48" fill="#fff"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Quick Links</h4><ul class="footer-links"><li><a href="#">Home</a></li><li><a href="#products">Products</a></li><li><a href="#oem">OEM & ODM</a></li><li><a href="#applications">Applications</a></li><li><a href="#about">About Us</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Products</h4><ul class="footer-links"><li><a href="#">Storage Cages</a></li><li><a href="#">Steel Pallets</a></li><li><a href="#">Stacking Racks</a></li><li><a href="#">Metal Containers</a></li><li><a href="#">Custom Solutions</a></li></ul></div>
+      <div>
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>No.35 Fugang Road, Shangma Industrial Zone, Wenling, Zhejiang, China</li>
+          <li><svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>0576-86162388</li>
+          <li><svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>sales@djshelf.com</li>
+        </ul>
+        <div class="footer-certs"><div class="footer-cert">ISO 9001</div><div class="footer-cert">CE</div></div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2025 Wenling Dajiang Storage and Logistics Equipment Manufacturing Co., Ltd. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  var nav=document.getElementById('mainNav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>60)},{passive:true});
+  var hamburger=document.getElementById('hamburger'),navLinks=document.getElementById('navLinks');
+  hamburger.addEventListener('click',function(){
+    navLinks.classList.toggle('active');
+    var s=hamburger.querySelectorAll('span');
+    if(navLinks.classList.contains('active')){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)'}
+    else{s[0].style.transform='';s[1].style.opacity='';s[2].style.transform=''}
+  });
+  navLinks.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){navLinks.classList.remove('active');var s=hamburger.querySelectorAll('span');s[0].style.transform='';s[1].style.opacity='';s[2].style.transform=''})});
+  function animateCounter(el){
+    var target=parseInt(el.getAttribute('data-target')),fmt=el.getAttribute('data-format'),dur=2200,start=performance.now();
+    function tick(now){var p=Math.min((now-start)/dur,1),e=1-Math.pow(1-p,3),v=Math.floor(e*target);el.textContent=fmt==='comma'?v.toLocaleString('en-US'):v;if(p<1)requestAnimationFrame(tick)}
+    requestAnimationFrame(tick);
+  }
+  var revealObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){revealObs.observe(el)});
+  var cObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll('.counter').forEach(animateCounter);cObs.unobserve(e.target)}})},{threshold:0.3});
+  var numSec=document.querySelector('.numbers');if(numSec)cObs.observe(numSec);
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var h=this.getAttribute('href');if(h==='#')return;e.preventDefault();var t=document.querySelector(h);if(t){window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-nav.offsetHeight,behavior:'smooth'})}})});
+  document.querySelectorAll('.products-grid .reveal,.why-grid .reveal,.app-grid .reveal,.qc-cards .reveal,.blog-grid .reveal').forEach(function(el){var p=el.parentElement,s=Array.from(p.querySelectorAll('.reveal')),i=s.indexOf(el);el.style.transitionDelay=(i*0.08)+'s'});
+  var hv=document.querySelector('.hero-video'),hf=document.getElementById('heroFallback');
+  if(hv&&hf){hv.addEventListener('playing',function(){hf.style.display='none'});hv.addEventListener('error',function(){hv.style.display='none'})}
+})();
+</script>
+</body>
+</html>
